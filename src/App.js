@@ -6,6 +6,7 @@ import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import Card from 'react-bootstrap/Card';
 import Image from 'react-bootstrap/Image';
+import Form from 'react-bootstrap/Form';
 
 import logo from './logo.svg';
 import './App.css';
@@ -26,6 +27,11 @@ function App() {
     <Container className='App'>
         <img src={logo} className="App-logo" alt="logo" />
         <div className='App-header'>Red Wine Gallery</div>
+        <Form className='pull-right'>
+          <Form.Group>
+            <Form.Control type='text' placeholder='Search for a wine!'></Form.Control>
+          </Form.Group>
+        </Form>
         <Row xs={1} md={3} lg={4} xl={5}>
           {redWines.map((wine) => {
             return (
